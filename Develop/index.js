@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer'),
+const inquirer = require('inquirer');
 const fs = require('fs');
 const path =require('path');
-const generateMarkDown = require('./utils/generateMarkDown');
+const generateMarkDown = require('utils/generateMarkDown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -39,12 +39,7 @@ const questions = [
 {
     type: 'input'  ,
     name: 'license'  ,
-    message:'wjat type of license does your project have?',
-},
-{
-    type: 'input' ,
-    name: 'dependencies' ,
-    message: '' ,
+    message:'what type of license does your project have?',
 },
 {
     type: 'input' ,
@@ -54,7 +49,7 @@ const questions = [
 {
     type: 'input' ,
     name: 'contributors' ,
-    message: ''who contributed to your project?' ,
+    message: 'who contributed to your project?' ,
 },
 ];
 
