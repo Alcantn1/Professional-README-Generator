@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path =require('path');
-const generateMarkDown = require('utils/generateMarkDown');
+const generateMarkdown = require('/Users/nicoalcantara/node-challenge/Professional-README-Generator/index.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -66,12 +66,19 @@ function writeToFile(fileName, data) {
   }
 
 // TODO: Create a function to initialize app
+// function init() {
+//     inquirer.prompt(questions).then((data) => {
+//         const markdown = generateMarkdown(data);
+//         writeToFile('README.md', generateMarkdown);
+//       });
+// }
 function init() {
     inquirer.prompt(questions).then((data) => {
-        const markdown = generateMarkdown(data);
-        writeToFile('README.md', markdown);
-      });
-}
+      const markdown = generateMarkdown(data);
+      writeToFile('README.md', generateMarkdown); 
+    });
+  }
+  
 
 // Function call to initialize app
 init();
